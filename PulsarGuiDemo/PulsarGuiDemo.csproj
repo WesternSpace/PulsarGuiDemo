@@ -1,0 +1,216 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Game2.AutoTests">
+      <HintPath>..\Game2\Game2.AutoTests.dll</HintPath>
+    </Reference>
+    <Reference Include="Game2.Client">
+      <HintPath>..\Game2\Game2.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Game2.ContentBuilder">
+      <HintPath>..\Game2\Game2.ContentBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Game2.Game">
+      <HintPath>..\Game2\Game2.Game.dll</HintPath>
+    </Reference>
+    <Reference Include="Game2.Plugin.Editor">
+      <HintPath>..\Game2\Game2.Plugin.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Game2.Simulation">
+      <HintPath>..\Game2\Game2.Simulation.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.AI">
+      <HintPath>..\Game2\VRage.AI.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Animation">
+      <HintPath>..\Game2\VRage.Animation.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Animation.Client">
+      <HintPath>..\Game2\VRage.Animation.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Audio">
+      <HintPath>..\Game2\VRage.Audio.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.AutoTest">
+      <HintPath>..\Game2\VRage.AutoTest.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Client">
+      <HintPath>..\Game2\VRage.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.CodeAnalysis">
+      <HintPath>..\Game2\VRage.CodeAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.CodeGuard.Analyzers">
+      <HintPath>..\Game2\VRage.CodeGuard.Analyzers.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.ContentPipeline">
+      <HintPath>..\Game2\VRage.ContentPipeline.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.ContentPipeline.Animations">
+      <HintPath>..\Game2\VRage.ContentPipeline.Animations.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.ContentPipeline.ArmorBlockModel">
+      <HintPath>..\Game2\VRage.ContentPipeline.ArmorBlockModel.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.ContentPipeline.ArmorBlockSide">
+      <HintPath>..\Game2\VRage.ContentPipeline.ArmorBlockSide.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.ContentPipeline.Audio">
+      <HintPath>..\Game2\VRage.ContentPipeline.Audio.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.ContentPipeline.Builder">
+      <HintPath>..\Game2\VRage.ContentPipeline.Builder.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.ContentPipeline.Builder.Plugin">
+      <HintPath>..\Game2\VRage.ContentPipeline.Builder.Plugin.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.ContentPipeline.Game">
+      <HintPath>..\Game2\VRage.ContentPipeline.Game.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.ContentPipeline.Models">
+      <HintPath>..\Game2\VRage.ContentPipeline.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.ContentPipeline.ModelsBase">
+      <HintPath>..\Game2\VRage.ContentPipeline.ModelsBase.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.ContentPipeline.ModelsValidation">
+      <HintPath>..\Game2\VRage.ContentPipeline.ModelsValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.ContentPipeline.ModelVoxels">
+      <HintPath>..\Game2\VRage.ContentPipeline.ModelVoxels.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.ContentPipeline.SlugFont">
+      <HintPath>..\Game2\VRage.ContentPipeline.SlugFont.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.ContentPipeline.SlugSVG">
+      <HintPath>..\Game2\VRage.ContentPipeline.SlugSVG.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.ContentPipeline.Textures">
+      <HintPath>..\Game2\VRage.ContentPipeline.Textures.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Core">
+      <HintPath>..\Game2\VRage.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Core.Editor">
+      <HintPath>..\Game2\VRage.Core.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Core.Game">
+      <HintPath>..\Game2\VRage.Core.Game.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Core.Game.Editor">
+      <HintPath>..\Game2\VRage.Core.Game.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.DCS">
+      <HintPath>..\Game2\VRage.DCS.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.DCS.Generator">
+      <HintPath>..\Game2\VRage.DCS.Generator.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.DCS.Samples">
+      <HintPath>..\Game2\VRage.DCS.Samples.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.EOS">
+      <HintPath>..\Game2\VRage.EOS.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Game">
+      <HintPath>..\Game2\VRage.Game.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Game.Client">
+      <HintPath>..\Game2\VRage.Game.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Game.Editor">
+      <HintPath>..\Game2\VRage.Game.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Input">
+      <HintPath>..\Game2\VRage.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Library">
+      <HintPath>..\Game2\VRage.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Library.Generator">
+      <HintPath>..\Game2\VRage.Library.Generator.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Mod.Io">
+      <HintPath>..\Game2\VRage.Mod.Io.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Multiplayer">
+      <HintPath>..\Game2\VRage.Multiplayer.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Physics">
+      <HintPath>..\Game2\VRage.Physics.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Physics.Client">
+      <HintPath>..\Game2\VRage.Physics.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Platform.Windows">
+      <HintPath>..\Game2\VRage.Platform.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Plugin.Editor">
+      <HintPath>..\Game2\VRage.Plugin.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Render">
+      <HintPath>..\Game2\VRage.Render.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Render.Editor">
+      <HintPath>..\Game2\VRage.Render.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Render12">
+      <HintPath>..\Game2\VRage.Render12.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Sample">
+      <HintPath>..\Game2\VRage.Sample.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Scripting">
+      <HintPath>..\Game2\VRage.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.ShaderBuilder">
+      <HintPath>..\Game2\VRage.ShaderBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Steam">
+      <HintPath>..\Game2\VRage.Steam.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Testing">
+      <HintPath>..\Game2\VRage.Testing.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.UI">
+      <HintPath>..\Game2\VRage.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.UI.Shared">
+      <HintPath>..\Game2\VRage.UI.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Voxels">
+      <HintPath>..\Game2\VRage.Voxels.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Voxels.Client">
+      <HintPath>..\Game2\VRage.Voxels.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Voxels.Editor">
+      <HintPath>..\Game2\VRage.Voxels.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Water">
+      <HintPath>..\Game2\VRage.Water.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Water.Client">
+      <HintPath>..\Game2\VRage.Water.Client.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.0.10" />
+    <PackageReference Include="Krafs.Publicizer" Version="2.3.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Lib.Harmony" Version="2.4.1" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<Publicize Include="Keen.Game2" />
+	</ItemGroup>
+</Project>
