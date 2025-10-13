@@ -4,6 +4,10 @@ namespace PulsarGuiDemo.Screens.PluginsScreen
 {
     internal class PluginsScreenViewModel : ScreenViewModel
     {
+
+        //TODO
+        public readonly HashSet<string> EnabledPlugins = null;
+
         public PluginsScreenViewModel() 
         {
             KeepsOtherScreensVisible = false;
@@ -18,6 +22,7 @@ namespace PulsarGuiDemo.Screens.PluginsScreen
 
         }
 
+        //TODO
         public bool RequiresRestart()
         {
             return true;

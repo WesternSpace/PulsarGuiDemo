@@ -5,6 +5,7 @@ using Keen.VRage.Core;
 using Keen.VRage.Library.Utils;
 using Keen.VRage.UI.AvaloniaInterface.Services;
 using Keen.VRage.UI.Screens;
+using PulsarGuiDemo.Screens.ProfilesScreen;
 
 namespace PulsarGuiDemo.Screens.PluginsScreen;
 
@@ -48,5 +49,10 @@ public partial class PluginsScreen : ScreenView
         {
             Dispose();
         }
+    }
+
+    private void ProfilesButton_OnClick(object? sender, RoutedEventArgs e)
+    {
+        Singleton<VRageCore>.Instance.Engine.Get<GameAppComponent>().MainMenu._sharedUI.CreateScreen<ProfilesScreen.ProfilesScreen>(new ProfilesScreenViewModel((DataContext as PluginsScreenViewModel).EnabledPlugins));
     }
 }

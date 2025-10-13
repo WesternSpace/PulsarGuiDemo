@@ -29,10 +29,10 @@
 					<DockPanel LastChildFill="True" Background="rgba(41,54,62,96)">
 						<Grid DockPanel.Dock="Top" Height="30" Background="rgba(60,76,82,96)">
 							<Grid.ColumnDefinitions>
-								<ColumnDefinition Width="200"></ColumnDefinition>
-								<ColumnDefinition Width="70"></ColumnDefinition>
-								<ColumnDefinition Width="70"></ColumnDefinition>
-								<ColumnDefinition Width="70"></ColumnDefinition>
+								<ColumnDefinition Width="200"/>
+								<ColumnDefinition Width="70"/>
+								<ColumnDefinition Width="70"/>
+								<ColumnDefinition Width="70"/>
 							</Grid.ColumnDefinitions>
 							<Label Grid.Column="0">Name</Label>
 							<Label Grid.Column="1">Status</Label>
@@ -47,10 +47,10 @@
 				<DataTemplate>
 					<Grid Margin="0,2">
 						<Grid.ColumnDefinitions>
-							<ColumnDefinition Width="200"></ColumnDefinition>
-							<ColumnDefinition Width="30"></ColumnDefinition>
-							<ColumnDefinition Width="30"></ColumnDefinition>
-							<ColumnDefinition Width="30"></ColumnDefinition>
+							<ColumnDefinition Width="200"/>
+							<ColumnDefinition Width="30"/>
+							<ColumnDefinition Width="30"/>
+							<ColumnDefinition Width="30"/>
 						</Grid.ColumnDefinitions>
 						<TextBlock Text="{Binding Name}" Grid.Column="0"/>
 						<TextBlock Text="{Binding Status}" Grid.Column="1"/>
@@ -61,9 +61,9 @@
 			</ListBox.ItemTemplate>
 		</ListBox>
 				<StackPanel Orientation="Horizontal" Grid.Column="3" Margin="0,12,0,0" HorizontalAlignment="Right">
-					<Button Width="30" Height="30" Margin="0,0,6,0"></Button>
-					<Button Width="30" Height="30" Margin="0,0,6,0"></Button>
-					<Button Width="30" Height="30"></Button>
+					<Button Name="PluginAddButton" Width="30" Height="30" Margin="0,0,6,0" IsEnabled="False"></Button>
+					<Button Name="PluginDetailsButton" Width="30" Height="30" Margin="0,0,6,0" IsEnabled="False"></Button>
+					<Button Name="PluginSettingsButton" Width="30" Height="30" IsEnabled="False"></Button>
 				</StackPanel>
 			</StackPanel>
 			<StackPanel Grid.Column="1" HorizontalAlignment="Center" Margin="12,0,0,0">
@@ -77,8 +77,8 @@
 							<DockPanel LastChildFill="True" Background="rgba(41,54,62,96)">
 								<Grid DockPanel.Dock="Top" Height="30" Background="rgba(60,76,82,96)">
 									<Grid.ColumnDefinitions>
-										<ColumnDefinition Width="200"></ColumnDefinition>
-										<ColumnDefinition Width="70"></ColumnDefinition>
+										<ColumnDefinition Width="200"/>
+										<ColumnDefinition Width="70"/>
 									</Grid.ColumnDefinitions>
 									<Label Grid.Column="0">Name</Label>
 									<Label Grid.Column="3">Enabled</Label>
@@ -91,8 +91,8 @@
 						<DataTemplate>
 							<Grid Margin="0,2">
 								<Grid.ColumnDefinitions>
-									<ColumnDefinition Width="200"></ColumnDefinition>
-									<ColumnDefinition Width="30"></ColumnDefinition>
+									<ColumnDefinition Width="200"/>
+									<ColumnDefinition Width="30"/>
 								</Grid.ColumnDefinitions>
 								<TextBlock Text="{Binding Name}" Grid.Column="0"/>
 								<CheckBox IsChecked="{Binding Enabled}" Grid.Column="3"/>
@@ -101,14 +101,14 @@
 					</ListBox.ItemTemplate>
 				</ListBox>
 				<StackPanel Orientation="Horizontal" Grid.Column="3" Margin="0,12,0,0" HorizontalAlignment="Right">
-					<Button Width="30" Height="30" Margin="0,0,6,0"></Button>
-					<Button Width="30" Height="30"></Button>
+					<Button Name="ModAddButton" Width="30" Height="30" Margin="0,0,6,0" IsEnabled="False"></Button>
+					<Button Name="ModDetailsButton" Width="30" Height="30" IsEnabled="False"></Button>
 				</StackPanel>
 			</StackPanel>
 			<StackPanel Grid.Column="3" Margin="16,30,0,0">
-				<Button Width="256" Height="50">Profiles</Button>
-				<Button Width="256" Height="50" Margin="0,16,0,0">Refresh</Button>
-				<Button Width="256" Height="50" Margin="0,16,0,0">Sources</Button>
+				<Button Name="ProfilesButton" Width="256" Height="50" Click="ProfilesButton_OnClick">Profiles</Button>
+				<Button Name="RefreshButton" Width="256" Height="50" Margin="0,16,0,0">Refresh</Button>
+				<Button Name="SourcesButton" Width="256" Height="50" Margin="0,16,0,0">Sources</Button>
 				<CheckBox Margin="0,16,0,0">Track Usage</CheckBox>
 			</StackPanel>
 		</Grid>

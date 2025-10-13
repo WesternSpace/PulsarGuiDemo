@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
@@ -22,6 +22,6 @@
     <ProjectReference Include="..\PulsarGuiDemo\PulsarGuiDemo.csproj" />
   </ItemGroup>
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="del VRage.CodeAnalysis.dll&#xD;&#xA;del VRage.CodeAnalysis.xml&#xD;&#xA;del VRage.Library.Generator.dll&#xD;&#xA;del VRage.Library.Generator.xml" WorkingDirectory="$(OutDir)"/>
+    <Exec Command="del VRage.CodeAnalysis.dll&#xD;&#xA;del VRage.CodeAnalysis.xml&#xD;&#xA;del VRage.Library.Generator.dll&#xD;&#xA;del VRage.Library.Generator.xml" WorkingDirectory="$(OutDir)" />
   </Target>
 </Project>
