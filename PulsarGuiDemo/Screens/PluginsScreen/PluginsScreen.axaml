@@ -48,9 +48,9 @@
 					<Grid Margin="0,2">
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="200"/>
-							<ColumnDefinition Width="30"/>
-							<ColumnDefinition Width="30"/>
-							<ColumnDefinition Width="30"/>
+							<ColumnDefinition Width="70"/>
+							<ColumnDefinition Width="70"/>
+							<ColumnDefinition Width="70"/>
 						</Grid.ColumnDefinitions>
 						<TextBlock Text="{Binding Name}" Grid.Column="0"/>
 						<TextBlock Text="{Binding Status}" Grid.Column="1"/>
@@ -92,7 +92,7 @@
 							<Grid Margin="0,2">
 								<Grid.ColumnDefinitions>
 									<ColumnDefinition Width="200"/>
-									<ColumnDefinition Width="30"/>
+									<ColumnDefinition Width="70"/>
 								</Grid.ColumnDefinitions>
 								<TextBlock Text="{Binding Name}" Grid.Column="0"/>
 								<CheckBox IsChecked="{Binding Enabled}" Grid.Column="3"/>
