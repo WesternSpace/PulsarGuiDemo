@@ -1,3 +1,4 @@
 ﻿using System.Runtime.CompilerServices;
 
-[assembly: IgnoresAccessChecksTo("Keen.Game2")]
+[assembly: IgnoresAccessChecksTo("Game2.Client")]
+[assembly: IgnoresAccessChecksTo("VRage.UI")]

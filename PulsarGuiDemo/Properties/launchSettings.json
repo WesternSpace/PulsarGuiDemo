@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Space Engineers 2": {
+      "commandName": "Executable",
+      "executablePath": "$(Game2)\\SpaceEngineers2.exe",
+      "commandLineArgs": "-plugins:C:\\Users\\Western\\AppData\\Roaming\\SpaceEngineers2\\Plugins\\SE2SimplePluginLoader.dll",
+      "workingDirectory": "$(Game2)",
+      "nativeDebugging": false,
+      "hotReloadEnabled": true
+    }
+  }
+}

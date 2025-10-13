@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <!-- Folder containing SpaceEngineers2.exe -->
+    <Game2>$(registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Steam App 1133870@InstallLocation)\Game2</Game2>
+  </PropertyGroup>
+</Project>

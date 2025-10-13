@@ -1,23 +1,41 @@
-﻿using Avalonia.Controls;
+﻿using Avalonia;
+using Avalonia.Controls;
+using Avalonia.Input;
 using HarmonyLib;
 using Keen.Game2.Client.UI.Library;
 using Keen.Game2.Client.UI.Menu;
-using Keen.VRage.Core;
-using Keen.VRage.Library.Reflection.DependencyInjections;
-using Keen.VRage.Library.Utils;
+using Keen.Game2.Client.UI.Menu.InGameMenu;
+using Keen.Game2.Client.UI.Menu.MainMenu;
+using Keen.VRage.UI.AvaloniaInterface;
 using Keen.VRage.UI.Shared.Helpers;
-using Keen.VRage.DCS.Components;
 using PulsarGuiDemo.Screens;
-using System.Linq;
+using PulsarGuiDemo.Screens.PluginsScreen;
 
 namespace PulsarGuiDemo.Patches
 {
     [HarmonyPatch(typeof(GameMenu), "UpdateButtons")]
     internal class GameMenu_UpdateButtons_Patch
     {
-        private static void Postfix(ref StackPanel? ____buttonsPanel)
+        private static void Postfix(GameMenu __instance)
         {
-            if (____buttonsPanel == null)
+            if (__instance._buttonsPanel == null)
+            {
+                return;
+            }
+
+            object dataContext = __instance.GetValue(GameMenu.DataContextProperty);
+
+            SharedUIComponent? component = null;
+
+            if (dataContext is MainMenuScreenViewModel mainMenuViewModel)
+            {
+                component = mainMenuViewModel._sharedUI;
+            }
+            else if (dataContext is InGameMenuScreenViewModel inGameMenuViewModel)
+            {
+                component = inGameMenuViewModel._sharedUI;
+            }
+            else
             {
                 return;
             }
@@ -26,10 +44,15 @@ namespace PulsarGuiDemo.Patches
             {
                 Classes = { "Menu" },
                 Content = "Plugins",
-                Command = SimpleCommand.Create(() => Singleton<VRageCore>.Instance.Engine.Get<SharedUIComponent>().CreateScreen<PluginsScreen>(new PluginsScreenViewModel(), true))
+                Command = SimpleCommand.Create(delegate
+                {
+                    component.CreateScreen<PluginsScreen>(new PluginsScreenViewModel(), true);
+                })
             };
 
-            ____buttonsPanel.Children.Insert(____buttonsPanel.Children.Count - 2, pluginsButton);
+            __instance._buttonsPanel.Children.Insert(__instance._buttonsPanel.Children.Count - 2, pluginsButton);
+
+            (AvaloniaApp.Instance.MainWindow as Window)?.AttachDevTools(new KeyGesture(Key.F12, KeyModifiers.Shift));
         }
     }
 }
