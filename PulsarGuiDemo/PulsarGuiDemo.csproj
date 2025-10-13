@@ -27,6 +27,9 @@
     <Reference Include="Game2.Simulation">
       <HintPath>$(Game2)\Game2.Simulation.dll</HintPath>
     </Reference>
+    <Reference Include="SpaceEngineers2">
+      <HintPath>$(Game2)\SpaceEngineers2.dll</HintPath>
+    </Reference>
     <Reference Include="VRage.AI">
       <HintPath>$(Game2)\VRage.AI.dll</HintPath>
     </Reference>
@@ -135,9 +138,6 @@
     <Reference Include="VRage.Library">
       <HintPath>$(Game2)\VRage.Library.dll</HintPath>
     </Reference>
-    <Reference Include="VRage.Library.Generator">
-      <HintPath>$(Game2)\VRage.Library.Generator.dll</HintPath>
-    </Reference>
     <Reference Include="VRage.Mod.Io">
       <HintPath>$(Game2)\VRage.Mod.Io.dll</HintPath>
     </Reference>
@@ -215,6 +215,7 @@
 	<ItemGroup>
 		<Publicize Include="Game2.Client" />
 		<Publicize Include="VRage.UI" />
+		<Publicize Include="SpaceEngineers2" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Compile Update="Screens\PluginsScreen\PluginsScreen.axaml.cs">
@@ -222,6 +223,6 @@
 	  </Compile>
 	</ItemGroup>
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
-	  <Exec Command="del VRage.CodeAnalysis.dll&#xD;&#xA;del VRage.CodeAnalysis.xml&#xD;&#xA;del VRage.Library.Generator.dll&#xD;&#xA;del VRage.Library.Generator.xml" WorkingDirectory="$(OutDir)"/>
+	  <Exec Command="del VRage.CodeAnalysis.dll&#xD;&#xA;del VRage.CodeAnalysis.xml&#xD;&#xA;del VRage.Library.Generator.dll&#xD;&#xA;del VRage.Library.Generator.xml" WorkingDirectory="$(OutDir)" />
 	</Target>
 </Project>

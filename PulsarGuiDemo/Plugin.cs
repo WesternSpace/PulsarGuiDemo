@@ -1,10 +1,6 @@
-﻿using Avalonia;
-using Avalonia.Controls;
-using Avalonia.Input;
-using HarmonyLib;
+﻿using HarmonyLib;
 using Keen.Game2.Game.Plugins;
 using Keen.VRage.Library.Diagnostics;
-using Keen.VRage.UI.AvaloniaInterface;
 using System.Reflection;
 
 namespace PulsarGuiDemo

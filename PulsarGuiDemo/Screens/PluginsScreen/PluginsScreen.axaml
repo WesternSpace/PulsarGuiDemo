@@ -114,8 +114,8 @@
 		</Grid>
 		<Separator Grid.Row="3" Background="rgb(77,99,96)" Margin="100,16,100,0"/>
 		<StackPanel Orientation="Horizontal" Grid.Row="4" HorizontalAlignment="Center" Margin="0,16,0,0">
-			<Button Width="264" Height="55">Apply</Button>
-			<Button Width="264" Height="55" Margin="26,0,0,0">Cancel</Button>
+			<Button Name="ApplyButton" Width="264" Height="55" Click="ApplyButton_OnClick">Apply</Button>
+			<Button Name="CancelButton" Width="264" Height="55" Margin="26,0,0,0" Click="CancelButton_OnClick">Cancel</Button>
 		</StackPanel>
 	</Grid>
 	</Border>

@@ -11,5 +11,16 @@ namespace PulsarGuiDemo.Screens.PluginsScreen
             AllowsInputFromLowerScreens = false;
             InitializeInputContext();
         }
+
+        // TODO
+        public void Save()
+        {
+
+        }
+
+        public bool RequiresRestart()
+        {
+            return true;
+        }
     }
 }
