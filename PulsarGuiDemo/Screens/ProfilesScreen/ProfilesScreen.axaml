@@ -5,15 +5,15 @@
              mc:Ignorable="d" d:DesignWidth="1920" d:DesignHeight="1080"
              x:Class="PulsarGuiDemo.Screens.ProfilesScreen.ProfilesScreen">
     <Border Background="Transparent"
-        BorderBrush="rgba(66,77,99,96)"
-        BorderThickness="1.5" 
-		Width="1224" 
-		Height="561">
+			BorderBrush="rgba(66,77,99,96)"
+			BorderThickness="1.5" 
+			Width="1224" 
+			Height="561">
         <StackPanel Background="rgba(37,47,53,96)">
             <TextBlock HorizontalAlignment="Center"
-			Margin="0,40,0,0"
-			FontSize="25"
-			FontWeight="Normal">Profiles</TextBlock>
+					   Margin="0,40,0,0"
+					   FontSize="25"
+					   FontWeight="Normal">Profiles</TextBlock>
             <Separator Background="rgb(77,99,96)" Margin="100,16,100,16"/>
             <ListBox HorizontalAlignment="Center" Width="1150" Height="345" >
 				<ListBox.Template>
@@ -46,11 +46,11 @@
 			</ListBox>
 			<Separator Background="rgb(77,99,96)" Margin="100,16,100,0"/>
 			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,16,0,0">
-			<Button Name="NewButton" Width="264" Height="55">New</Button>
-			<Button Name="LoadButton" Width="264" Height="55" Margin="26,0,0,0">Load</Button>
-			<Button Name="RenameButton" Width="264" Height="55" Margin="26,0,0,0">Rename</Button>
-			<Button Name="CancelButton" Width="264" Height="55" Margin="26,0,0,0">Cancel</Button>
-		</StackPanel>
+				<Button Name="NewButton" Width="264" Height="55">New</Button>
+				<Button Name="LoadButton" Width="264" Height="55" Margin="26,0,0,0">Load</Button>
+				<Button Name="RenameButton" Width="264" Height="55" Margin="26,0,0,0">Rename</Button>
+				<Button Name="CancelButton" Width="264" Height="55" Margin="26,0,0,0">Cancel</Button>
+			</StackPanel>
 		</StackPanel>
     </Border>
 </UserControl>
